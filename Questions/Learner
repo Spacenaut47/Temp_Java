@@ -1,0 +1,81 @@
+✅ Question 1: Learning App – Learner & Course
+🧠 Problem Statement:
+You need to build a system that manages:
+
+A list of registered learners
+
+Their enrolled courses
+
+📦 Class 1: Learner
+Attributes:
+
+String learnerId
+
+String learnerName
+
+List<Course> courses
+
+➡️ Implement:
+
+Getters and setters for all fields
+
+Parameterized constructor
+
+📦 Class 2: Course
+Attributes:
+
+String courseId
+
+String courseName
+
+String status (only values: "Inprogress" or "Completed")
+
+int duration (in hours)
+
+➡️ Implement:
+
+Getters and setters
+
+Parameterized constructor
+
+📘 Class: LearnerSolution
+You must create 2 static methods:
+
+🔹 Method 1: FindOngoingCourseCount
+Inputs:
+
+List<Learner> learners
+
+String learnerId
+
+Output:
+
+Count of courses that are in "Inprogress" status for the given learner
+
+If no such learner or no such course exists, print:
+
+yaml
+Copy
+Edit
+No ongoing courses
+🔹 Method 2: FindTotalLearningHours
+Inputs:
+
+List<Learner> learners
+
+String learnerId
+
+Output:
+
+Sum of duration of all "Completed" courses for that learner
+
+If none found or learner ID is invalid, print:
+
+arduino
+Copy
+Edit
+No completed courses available
+🔸 Note:
+Learner ID starts with L0..
+
+Course ID starts with C0..
