@@ -1,0 +1,111 @@
+✅ Question 2: Amazon Prime Subscriptions
+📦 Class: Amazonprime
+Attributes:
+
+int primeId
+
+String userName
+
+int subscribedPackage (in days)
+
+String showStreaming
+
+int views
+
+➡️ Implement:
+
+All attributes should be private
+
+Create getters, setters, and a parameterized constructor
+
+📘 Class: Solution
+Implement two static methods:
+
+🔹 Method 1: findRemainingSubscriptionDays
+Inputs:
+
+Array of Amazonprime objects
+
+int days
+
+int primeId
+
+Output:
+
+Return subscribedPackage - days if primeId is found
+
+If not found, return 0
+
+🔸 In main():
+
+If return value > 0 → print the number
+
+If return value = 0 → print:
+
+css
+Copy
+Edit
+Its time to recharge your Prime Account
+🔹 Method 2: findDetailsForGivenShow
+Inputs:
+
+Array of Amazonprime objects
+
+String show (case-insensitive)
+
+Output:
+
+Return Amazonprime[] filtered where showStreaming matches the input
+
+Sort by views in ascending order
+
+If none found → return null
+
+🔸 In main():
+
+If null → print:
+
+arduino
+Copy
+Edit
+No such shows available
+Else → print in format:
+
+shell
+Copy
+Edit
+primeId$userName$views
+🧪 Sample Input Pattern:
+css
+Copy
+Edit
+100
+April
+129
+Suits
+30
+102
+Lex
+999
+Greys Anatomy
+25
+103
+Alex
+999
+Greys Anatomy
+5
+104
+Mark
+999
+Suits
+40
+19
+100
+Greys Anatomy
+✅ Sample Output:
+shell
+Copy
+Edit
+110
+103$Alex$5
+102$Lex$25
