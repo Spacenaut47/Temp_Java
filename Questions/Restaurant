@@ -1,0 +1,128 @@
+🧠 Problem Statement
+You need to implement a system that manages rating and reviews of different food items in various restaurants.
+
+📦 Class Definitions
+1. FoodMenu Class
+Attributes:
+
+menuName : String
+
+price : int
+
+rating : double
+
+review : String
+
+2. Restaurant Class
+Attributes:
+
+restaurantName : String
+
+location : String
+
+foodmenu : List<FoodMenu>
+
+Instructions:
+
+Create getters, setters, and a parameterized constructor for both classes.
+
+3. RestaurantSolution Class
+This class should implement two static methods as below:
+
+🧮 Method 1: FindRestaurantCountByLocation
+➤ Inputs:
+List<Restaurant> restaurant
+
+String location
+
+➤ Behavior:
+Count and print the number of restaurants in the given location.
+
+If none found, print:
+
+pgsql
+Copy
+Edit
+No restaurants available for <location>
+🍽 Method 2: FindTheMostPreferredFoodByRating
+➤ Inputs:
+List<Restaurant> restaurant
+
+String restaurantname
+
+➤ Behavior:
+Find the most highly rated food item in the given restaurant.
+
+Print in the format:
+
+php-template
+Copy
+Edit
+Most preferred menu in <restaurant> is <menuname> with rating <rating>
+If restaurant not found, print:
+
+arduino
+Copy
+Edit
+Restaurant not available
+🔢 Input Format
+First input: number of restaurants
+
+Second: restaurant name
+
+Third: location
+
+Fourth: number of food items in the restaurant
+
+Then for each food item:
+
+menuName
+
+price
+
+rating
+
+review
+
+(Steps 2 to 5 repeat based on number of restaurants)
+
+✅ Example
+🧾 Input:
+mathematica
+Copy
+Edit
+2
+Star Restaurant
+Chennai
+3
+Paneer Masala
+300
+3.5
+Good
+Paneer Pulav
+300
+4.0
+Delicious
+Kaju Paneer Biryani
+350
+5.0
+Excellent
+Bheem Restaurant
+Hyderabad
+2
+Paneer Pulav
+350
+4.5
+Excellent
+Kaju Paneer Biryani
+325
+4.3
+Good
+Chennai
+Bheem Restaurant
+✅ Output:
+csharp
+Copy
+Edit
+1
+Most preferred menu in Bheem Restaurant is Paneer Pulav with rating 4.5
