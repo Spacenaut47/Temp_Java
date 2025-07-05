@@ -1,0 +1,146 @@
+ Java Coding Problem: Employee Benefits & Salary Update
+🧾 Class Definition:
+🔹 Employee class:
+Attributes:
+
+id : int
+
+name : String
+
+salary : double
+
+noOfBenefits : int
+
+benefits : List<String>
+
+✅ Must create:
+
+Getter and setter methods
+
+Constructor
+
+🛠 EmployeeService class:
+Should contain two non-static methods:
+✅ Task 1: Fetch List of Employees Based on the Benefit
+🔸 Method behavior:
+Find and return the list of employees who have the specified benefit.
+
+🔸 Inputs:
+List<Employee> employees
+
+String benefit
+
+🔸 If no employees found:
+Throw a custom exception NoEmployeesFoundException
+With message:
+
+pgsql
+Copy
+Edit
+No Employees Found
+🔸 Output:
+List of matching employees must be printed in the main method
+
+✅ Task 2: Update the Salaries of Employees Based on Percentage
+🔸 Method behavior:
+Update employee salary based on the given percentage.
+
+🔸 Inputs:
+List<Employee> employees
+
+int percentage
+
+🔸 Conditions:
+If percentage is less than 0, throw custom exception NegativePercentageException
+With message:
+
+nginx
+Copy
+Edit
+Percentage cannot be negative
+🔸 Output:
+Return updated salary list for each benefit per employee
+
+This list must also be printed in the main method
+
+⚠️ Notes:
+Use the main method in a class named EmployeeTester for:
+
+Accepting input
+
+Invoking methods
+
+Printing outputs
+
+Do not use static test data
+
+All string comparisons should be case-insensitive
+
+🧪 Sample Input 1:
+yaml
+Copy
+Edit
+3
+101
+Meena
+2500
+2
+Health Insurance
+Paid Leave
+102
+Priya
+3000
+3
+Health Insurance
+Paid Leave
+Life Insurance
+103
+Rahul
+2800
+1
+Paid Leave
+Life Insurance
+10
+✅ Sample Output 1:
+yaml
+Copy
+Edit
+102
+Priya
+3000.0
+Health Insurance
+Paid Leave
+Life Insurance
+2750.0
+3300.0
+3080.0
+🧪 Sample Input 2:
+yaml
+Copy
+Edit
+3
+101
+Priya
+3000
+2
+Paid Leaves
+Pension Plan
+102
+Rahul
+4300
+1
+Pension Plan
+103
+Meena
+5200
+2
+Life Insurance
+Paid Leaves
+Health Insurance
+-10
+❌ Sample Output 2:
+pgsql
+Copy
+Edit
+No Employees Found
+Percentage cannot be negative
