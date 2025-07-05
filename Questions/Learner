@@ -1,81 +1,136 @@
-✅ Question 1: Learning App – Learner & Course
-🧠 Problem Statement:
-You need to build a system that manages:
+✅ Problem Statement: Learning Application – Learners & Enrolled Courses
+A learning application maintains a list of registered learners and their enrolled courses.
 
-A list of registered learners
+You must complete a program that:
 
-Their enrolled courses
+Maintains a list of learners and their enrolled courses
 
-📦 Class 1: Learner
-Attributes:
+Implements operations based on the learner's course status
 
+🧾 Class Definitions
+🔹 Course class – Attributes:
+String courseId
+
+String courseName
+
+String status → Can be either "Inprogress" or "Completed"
+
+int duration → Duration in hours
+
+✅ You must implement:
+
+Getters and setters for all fields
+
+Parameterized constructor
+
+🔹 Learner class – Attributes:
 String learnerId
 
 String learnerName
 
 List<Course> courses
 
-➡️ Implement:
-
-Getters and setters for all fields
-
-Parameterized constructor
-
-📦 Class 2: Course
-Attributes:
-
-String courseId
-
-String courseName
-
-String status (only values: "Inprogress" or "Completed")
-
-int duration (in hours)
-
-➡️ Implement:
+✅ You must implement:
 
 Getters and setters
 
 Parameterized constructor
 
-📘 Class: LearnerSolution
-You must create 2 static methods:
+📘 LearnerSolution class:
+Create a class that holds the logic with two static methods:
 
-🔹 Method 1: FindOngoingCourseCount
-Inputs:
+✅ Static Methods to Implement
+1. FindOngoingCourseCount(List<Learner> learners, String learnerId)
+This method should:
 
-List<Learner> learners
+Count how many "Inprogress" courses are enrolled by the given learnerId.
 
-String learnerId
-
-Output:
-
-Count of courses that are in "Inprogress" status for the given learner
-
-If no such learner or no such course exists, print:
+If learnerId is not valid or if no such courses exist:
 
 yaml
 Copy
 Edit
 No ongoing courses
-🔹 Method 2: FindTotalLearningHours
-Inputs:
+2. FindTotalLearningHours(List<Learner> learners, String learnerId)
+This method should:
 
-List<Learner> learners
+Print the total learning hours (sum of duration) of all "Completed" courses for the given learner.
 
-String learnerId
-
-Output:
-
-Sum of duration of all "Completed" courses for that learner
-
-If none found or learner ID is invalid, print:
+If learnerId is invalid or no "Completed" courses exist:
 
 arduino
 Copy
 Edit
 No completed courses available
-🔸 Note:
-Learner ID starts with L0..
+📌 Notes:
+Learner ID always starts with "L0.."
 
-Course ID starts with C0..
+Course ID always starts with "C0.."
+
+🧪 Input Format:
+First line: Number of learners
+
+For each learner:
+
+Learner ID
+
+Learner name
+
+Number of enrolled courses
+
+For each course:
+
+Course ID
+
+Course name
+
+Course status (Inprogress or Completed)
+
+Duration (int)
+
+Final line: learnerId to check (used in both methods)
+
+🧪 Sample Input 1:
+Copy
+Edit
+1
+L001
+Raghu
+2
+C001
+JSP
+Completed
+50
+C002
+Angular
+InProgress
+45
+L001
+✅ Sample Output 1:
+Copy
+Edit
+1
+50
+🧪 Sample Input 2:
+sql
+Copy
+Edit
+1
+L002
+Raj
+2
+C004
+Java
+InProgress
+60
+C005
+SQL
+InProgress
+40
+L002
+✅ Sample Output 2:
+arduino
+Copy
+Edit
+2
+No completed courses available
