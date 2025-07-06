@@ -83,7 +83,11 @@ public class Solution {
             return null;
         }
 
-        filtered.sort(Comparator.comparingInt(Amazonprime::getViews));
+        Collections.sort(filtered, new Comparator<Amazonprime>() {
+            public int compare(Amazonprime a1, Amazonprime a2) {
+                return Integer.compare(a1.getViews(), a2.getViews());
+            }
+        });
 
         return filtered.toArray(new Amazonprime[0]);
     }
